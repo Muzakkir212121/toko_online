@@ -23,7 +23,7 @@
 </div>
     <div class="row text-center mt-4">
 
-        <?php foreach ($barang as $brg) : ?>
+        <?php foreach ($pakaian_pria as $brg) : ?>
                 
             <div class="card ml-3" style="width: 16rem;">
                 <img src="<?php echo base_url(). '/uploads/' .$brg->gambar ?>" class="card-img-top" alt="...">

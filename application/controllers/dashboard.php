@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller{
 
     public function tambah_ke_keranjang($id)
     {
-        $barang = $this->model_barang->find($id);
+        $barang = $this->Model_barang->find($id);
 
         $data = array(
             'id'      => $barang-> id_brg,
@@ -58,6 +58,14 @@ class Dashboard extends CI_Controller{
     }else{
         echo "Maaf, Pesanan Anda Gagal diproses";
     }
+    }
+
+    public function detail($id_brg){
+        $data['barang'] = $this->model_barang->detail_barang($id_brg);
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_barang', $data);
+        $this->load->view('templates/footer');
     }
 
 }

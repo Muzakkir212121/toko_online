@@ -16,13 +16,13 @@
             $this->db->insert('tb_invoice', $invoice);
             $id_invoice = $this->db->insert_id();
 
-            foreach ($this->cart->contents() as $items){
+            foreach ($this->cart->contents() as $item){
                 $data = array(
                     'id_invoice'        =>$id_invoice,
                     'id_brg'            =>$item['id'],
                     'nama_brg'          =>$item['name'],
                     'jumlah'            =>$item['qty'],
-                    'harga'             =>$item['price']
+                    'harga'             =>$item['price'],
                 );
                 $this->db->insert('tb_pesanan', $data);
             }
