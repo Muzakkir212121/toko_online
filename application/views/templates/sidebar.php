@@ -11,7 +11,7 @@
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa fa-store"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">TOKO ONLINE</div>
+                <div class="sidebar-brand-text mx-3">ADMIN</div>
             </a>
 
             <!-- Divider -->
@@ -19,29 +19,21 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo base_url('dashboard')?>">
+                <a class="nav-link" href="<?php echo base_url('admin/dashboard_admin')?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                KATEGORI
-            </div>
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/elektronik')?>">
+                <a class="nav-link" href="<?php echo base_url('admin/data_barang')?>">
                     <i class="fas fa-fw fa-tv"></i>
-                    <span>Elektronik</span></a>
+                    <span>Data Barang</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('kategori/pakaian_pria')?>">
+                <a class="nav-link" href="<?php echo base_url('admin/invoices')?>">
                     <i class="fas fa-fw fa-tshirt"></i>
-                    <span>Pakaian Pria</span></a>
+                    <span>Invoices</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('kategori/pakaian_wanita')?>">

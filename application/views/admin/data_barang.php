@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i>Tambah Barang</div>
+    <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i>Tambah Barang</button>
     <table class="table table-bordered">
         <tr>
             <th>NO</th>
@@ -42,10 +42,10 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?php echo base_url(). 'admin/data_barang/tambah_aksi'; ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo base_url(). 'admin/data_barang/tambah_barang'; ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label>Nama Barang</label>
-                    <input type="text" name="nama_barang" class="form-control" />
+                    <input type="text" name="nama_brg" class="form-control" />
                 </div>
                 <div class="form-group">
                     <label>Keterangan</label>

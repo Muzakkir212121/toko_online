@@ -10,32 +10,33 @@ class data_barang extends CI_Controller{
 
     }
 
-    public function tambah_aksi(){
-        $nama_brg = $this->input->post('nama_brg');
+    public function tambah_barang()
+    {
+        $nama_brg   = $this->input->post('nama_brg');
         $keterangan = $this->input->post('keterangan');
-        $kategori = $this->input->post('kategori');
-        $harga = $this->input->post('harga');
-        $stok = $this->input->post('stok');
-        $gambar = $_FILES['gambar']['name'];
-        if ($gambar = ""){}else{
+        $kategori   = $this->input->post('kategori');
+        $harga      = $this->input->post('harga');
+        $stok       = $this->input->post('stok');
+        $gambar  = $_FILES['gambar']['name'];
+        if ($gambar = ''){}else{
             $config ['upload_path'] = './uploads';
-            $conifg ['allowed_types'] = 'jpg|jpeg|png';
+            $config ['allowed_types'] = 'jpg|jpeg';
 
             $this->load->library('upload', $config);
-            if($this->upload->do_upload('gambar')){
-                $gambar= $this->upload->data('file_name');
+            if(!$this->upload->do_upload('gambar')){
+                echo "Gambar Gagal Upload";
             }else{
-                echo $this->upload->display_errors();
+                $gambar = $this->upload->data('file_name');
             }
         }
 
         $data = array(
-            'nama_brg' => $nama_brg,
+            'nama_brg'   => $nama_brg,
             'keterangan' => $keterangan,
-            'kategori' => $kategori,
-            'harga' => $harga,
-            'stok' => $stok,
-            'gambar' => $gambar
+            'kategori'   => $kategori,
+            'harga'      => $harga,
+            'stok'       => $stok,
+            'gambar'     => $gambar
         );
 
         $this->model_barang->tambah_barang($data, 'tb_barang');
