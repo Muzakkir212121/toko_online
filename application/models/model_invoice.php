@@ -3,13 +3,13 @@
         public function index()
         {
             date_default_timezone_set('Asia/Jakarta');
-            $nama   =$this->input->post('nama');
-            $alamat   =$this->input->post('alamat');
+            $nama       =$this->input->post('nama');
+            $alamat     =$this->input->post('alamat');
 
             $invoice = array(
-                'nama'      => $nama,
+                'nama'      =>$nama,
                 'alamat'    =>$alamat,
-                'tgl_pesan' => date('Y-m-d H:i:s'),
+                'tgl_pesan' =>date('Y-m-d H:i:s'),
                 'batas_bayar'   => date ('Y-m-d H:i:s', mktime( date('H'), date('i'), date('s'), date('m'), date('d') +1, date('Y') )),
             );
 
@@ -29,12 +29,40 @@
             return TRUE;
         }
 
-        public function tampil_data(){
+        public function tampil_data()
+        {
             $result = $this->db->get('tb_invoice');
-            if($result->num_rows() >= 0){
-                return $result->result();
-            }else{
-                return false;
-            }
+            return $result->result();
         }
+
+        // public function tampil_data()
+        // {
+        //     $result = $this->db->get('tb_invoice');
+        //     if($result->num_rows() > 0){
+        //         return $result->result();
+        //     }else{
+        //         return false;
+        //     }
+        // }
+
+        public function ambil_id_invoice($id_invoice)
+        {
+            $result = $this->db->where('id', $id_invoice)->limit(1)->get('tb_invoice');
+            if($result->num_rows() > 0){
+                return $result->row();
+        }else{
+            return false;
+        }  
+        }
+
+        public function ambil_id_pesanan($id_invoice)
+        {
+            $result = $this->db->where('id_invoice', $id_invoice)->get('tb_pesanan');
+            if($result->num_rows() > 0){
+                return $result->result();
+        }else{
+            return false;
+        }  
+        }
+
     }

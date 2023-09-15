@@ -7,11 +7,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index">
                 <div class="sidebar-brand-icon ">
                     <i class="fas fa fa-store"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">ADMIN</div>
+                <div class="sidebar-brand-text mx-3">TOKO ONLINE</div>
             </a>
 
             <!-- Divider -->
