@@ -57,7 +57,7 @@
                       <option>Eletronik</option>
                       <option>Pakaian Pria</option>
                       <option>Pakaian Wanita</option>
-                      <option>Pakaian Anak-anak</option>
+                      <option>Pakaian Anak</option>
                       <option>Peralatan Olahraga</option>
                     </select>
                   </div>

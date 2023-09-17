@@ -15,9 +15,9 @@
            return $this->db->get_where('tb_barang', array('kategori' => 'pakaian wanita'));
         }
         
-        public function data_pakaian_anak_anak()
+        public function data_pakaian_anak()
         {
-           return $this->db->get_where('tb_barang', array('kategori' => 'pakaian anak_anak'));
+           return $this->db->get_where('tb_barang', array('kategori' => 'pakaian anak'));
         }
 
         public function data_peralatan_olahraga()
